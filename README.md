@@ -1,2 +1,2 @@
-# TSR-Thesis---JLCA
+# TSR-Thesis_JLCA
 Looker Thesis Jose Luis Castro Aguilar
