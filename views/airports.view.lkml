@@ -136,6 +136,14 @@ view: airports {
     sql: ${TABLE}.longitude ;;
   }
 
+  dimension: location {
+    description: "Location in lat,long coordinates"
+    type: location
+    sql_latitude: ${latitude} ;;
+    sql_longitude: ${longitude} ;;
+    map_layer_name: us_states
+  }
+
   dimension: major {
     type: string
     sql: ${TABLE}.major ;;
