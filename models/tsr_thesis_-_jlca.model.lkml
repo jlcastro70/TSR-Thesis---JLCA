@@ -25,38 +25,76 @@ persist_with: tsr_thesis_-_jlca_default_datagroup
 # Typically, join parameters require that you define the join type, join relationship, and a sql_on clause.
 # Each joined view also needs to define a primary key.
 
-explore: accidents {}
+explore: accidents {
+  join: airports {
+    type: left_outer
+    sql_on: ${accidents.location} = ${airports.location} ;;
+    relationship: many_to_one
+  }
+   }
 
-explore: aircraft {}
+explore: aircraft {
+  hidden: yes
+}
 
-explore: aircraft_models {}
+explore: aircraft_models {
+  hidden: yes
+}
 
-explore: airports {}
+explore: airports {
+  hidden: yes
+}
 
-explore: blah {}
+explore: blah {
+  hidden: yes
+}
 
-explore: cal454 {}
+explore: cal454 {
+  hidden: yes
+}
 
-explore: carriers {}
+explore: carriers {
+  hidden: yes
+}
 
-explore: case_sensitive {}
+explore: case_sensitive {
+  hidden: yes
+}
 
 explore: flights {}
 
-explore: flights2 {}
+explore: flights2 {
+  hidden: yes
+}
 
-explore: flights_by_day {}
+explore: flights_by_day {
+  hidden: yes
+}
 
-explore: flights_dk {}
+explore: flights_dk {
+  hidden: yes
+}
 
-explore: myevent {}
+explore: myevent {
+  hidden: yes
+}
 
-explore: myevent_2 {}
+explore: myevent_2 {
+  hidden: yes
+}
 
-explore: ontime {}
+explore: ontime {
+  hidden: yes
+}
 
-explore: regions {}
+explore: regions {
+  hidden: yes
+}
 
-explore: temp2 {}
+explore: temp2 {
+  hidden: yes
+}
 
-explore: test {}
+explore: test {
+  hidden: yes
+}
