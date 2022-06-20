@@ -26,7 +26,7 @@ persist_with: tsr_thesis_-_jlca_default_datagroup
 # Each joined view also needs to define a primary key.
 
 explore: accidents {
-  hidden: yes
+  #hidden: yes
 }
 
 explore: aircraft {
@@ -41,19 +41,7 @@ explore: airports {
   hidden: yes
 }
 
-explore: blah {
-  hidden: yes
-}
-
-explore: cal454 {
-  hidden: yes
-}
-
 explore: carriers {
-  hidden: yes
-}
-
-explore: case_sensitive {
   hidden: yes
 }
 
@@ -92,38 +80,18 @@ explore: flights {
   }
 }
 
-explore: flights2 {
-  hidden: yes
-}
-
 explore: flights_by_day {
-  hidden: yes
+ # hidden: yes
 }
 
 explore: flights_dk {
-  hidden: yes
-}
-
-explore: myevent {
-  hidden: yes
-}
-
-explore: myevent_2 {
-  hidden: yes
+ # hidden: yes
 }
 
 explore: ontime {
-  hidden: yes
+ # hidden: yes
 }
 
 explore: regions {
-  hidden: yes
-}
-
-explore: temp2 {
-  hidden: yes
-}
-
-explore: test {
-  hidden: yes
+ # hidden: yes
 }

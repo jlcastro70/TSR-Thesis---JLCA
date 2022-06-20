@@ -110,9 +110,17 @@ view: accidents {
     sql: ${TABLE}.latitude ;;
   }
 
+  #dimension: location {
+  #  type: string
+  #   sql: ${TABLE}.location ;;
+  #}
+
   dimension: location {
-    type: string
-    sql: ${TABLE}.location ;;
+    description: "Location in lat,long coordinates"
+    type: location
+    sql_latitude: ${latitude} ;;
+    sql_longitude: ${longitude} ;;
+    map_layer_name: us_states
   }
 
   dimension: longitude {
