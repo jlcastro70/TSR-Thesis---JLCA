@@ -86,7 +86,8 @@ view: accidents {
   }
 
   dimension: event_jl
-  {sql: cast(${TABLE}.event_date as date);;
+  {label: "Accident Date"
+  sql: cast(${TABLE}.event_date as date);;
   }
 
   dimension: event_id {
