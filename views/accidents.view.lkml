@@ -82,7 +82,11 @@ view: accidents {
       quarter,
       year
     ]
-    sql: ${TABLE}.event_date ;;
+    sql: ${TABLE}.event_date  ;;
+  }
+
+  dimension: event_jl
+  {sql: cast(${TABLE}.event_date as date);;
   }
 
   dimension: event_id {
