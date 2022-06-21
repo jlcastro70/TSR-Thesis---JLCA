@@ -26,7 +26,7 @@ persist_with: tsr_thesis_-_jlca_default_datagroup
 # Each joined view also needs to define a primary key.
 
 explore: accidents {
-  #hidden: yes
+  hidden: yes
 }
 
 explore: aircraft {
@@ -46,6 +46,13 @@ explore: carriers {
 }
 
 explore: flights {
+
+  join: accidents {
+    type: left_outer
+    sql_on: ${flights.id2} = ${accidents.id} ;;
+    relationship: many_to_one
+  }
+
   join: carriers {
     type: left_outer
     sql_on: ${flights.carrier} = ${carriers.code} ;;
