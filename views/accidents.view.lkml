@@ -82,6 +82,8 @@ view: accidents {
       quarter,
       year
     ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.event_date  ;;
   }
 
