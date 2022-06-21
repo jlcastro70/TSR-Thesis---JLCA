@@ -53,6 +53,12 @@ explore: flights {
     relationship: many_to_one
   }
 
+  join: airports {
+    type: left_outer
+    sql_on: ${flights.id2} = ${airports.id} ;;
+    relationship: many_to_one
+  }
+
   join: carriers {
     type: left_outer
     sql_on: ${flights.carrier} = ${carriers.code} ;;
