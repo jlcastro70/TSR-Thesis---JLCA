@@ -38,7 +38,7 @@ explore: aircraft_models {
 }
 
 explore: airports {
-  #hidden: yes
+  hidden: yes
 }
 
 explore: carriers {
@@ -71,22 +71,6 @@ explore: flights {
     relationship: many_to_one
   }
 
-  join: aircraft_origin {
-    from: airports
-    type: left_outer
-    sql_on: ${flights.origin} = ${aircraft_origin.code} ;;
-    relationship: many_to_one
-    fields: [full_name, city, state, code, location]
-  }
-
-  join: aircraft_destination {
-    from: airports
-    type: left_outer
-    sql_on: ${flights.destination} = ${aircraft_destination.code} ;;
-    relationship: many_to_one
-    fields: [full_name, city, state, code]
-  }
-
   join: aircraft_models {
     sql_on: ${aircraft.aircraft_model_code} = ${aircraft_models.aircraft_model_code} ;;
     relationship: many_to_one
@@ -94,9 +78,9 @@ explore: flights {
 }
 
 explore: ontime {
-  hidden: yes
+  #hidden: yes
 }
 
 explore: regions {
-  hidden: yes
+  #hidden: yes
 }

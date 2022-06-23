@@ -85,11 +85,6 @@ view: flights {
     sql: ${TABLE}.distance ;;
   }
 
-  dimension: diverted {
-    type: string
-    sql: ${TABLE}.diverted ;;
-  }
-
   dimension: flight_num {
     type: string
     sql: ${TABLE}.flight_num ;;
@@ -113,16 +108,6 @@ view: flights {
   dimension: tail_num {
     type: string
     sql: ${TABLE}.tail_num ;;
-  }
-
-  dimension: taxi_in {
-    type: number
-    sql: ${TABLE}.taxi_in ;;
-  }
-
-  dimension: taxi_out {
-    type: number
-    sql: ${TABLE}.taxi_out ;;
   }
 
   measure: total_cancelled_conditional {
