@@ -38,7 +38,7 @@ explore: aircraft_models {
 }
 
 explore: airports {
-  hidden: yes
+  #hidden: yes
 }
 
 explore: carriers {
@@ -93,18 +93,10 @@ explore: flights {
   }
 }
 
-explore: flights_by_day {
- # hidden: yes
-}
-
-explore: flights_dk {
- # hidden: yes
-}
-
 explore: ontime {
- # hidden: yes
+  hidden: yes
 }
 
 explore: regions {
- # hidden: yes
+  hidden: yes
 }
