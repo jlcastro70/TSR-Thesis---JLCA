@@ -43,6 +43,8 @@ view: flights {
       quarter,
       year
     ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.arr_time ;;
   }
 
@@ -72,6 +74,8 @@ view: flights {
       quarter,
       year
     ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dep_time ;;
   }
 

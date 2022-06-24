@@ -51,9 +51,9 @@ view: airports {
     sql: ${cbd_dist} ;;
   }
 
-  measure: average_cbd_dist {
+  measure: average_elevation {
     type: average
-    sql: ${cbd_dist} ;;
+    sql: ${elevation} ;;
   }
 
   dimension: cert {
