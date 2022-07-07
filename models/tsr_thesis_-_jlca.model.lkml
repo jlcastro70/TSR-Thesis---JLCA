@@ -34,11 +34,35 @@ explore: aircraft {
 }
 
 explore: aircraft_models {
-  hidden: yes
+  #hidden: yes
 }
 
 explore: airports {
-  hidden: yes
+  join: accidents {
+    type: left_outer
+    sql_on: ${airports.code} = ${accidents.airport_code} ;;
+    relationship: many_to_one
+  }
+  join: aircraft {
+    type: left_outer
+    sql_on: ${accidents.registration_number} = ${aircraft.tail_num} ;;
+    relationship: many_to_one
+  }
+  join: flights {
+    type: left_outer
+    sql_on: ${aircraft.tail_num} = ${flights.tail_num} ;;
+    relationship: many_to_one
+  }
+  join: ontime {
+    type: left_outer
+    sql_on: ${flights.flight_num} = ${ontime.flight_num} ;;
+    relationship: many_to_one
+  }
+  join: carriers {
+    type: left_outer
+    sql_on: ${flights.carrier} = ${carriers.code} ;;
+    relationship: many_to_one
+  }
 }
 
 explore: carriers {
@@ -46,41 +70,13 @@ explore: carriers {
 }
 
 explore: flights {
-
-  join: accidents {
-    type: left_outer
-    sql_on: ${flights.id2} = ${accidents.id} ;;
-    relationship: many_to_one
-  }
-
-  join: airports {
-    type: left_outer
-    sql_on: ${flights.id2} = ${airports.id} ;;
-    relationship: many_to_one
-  }
-
-  join: carriers {
-    type: left_outer
-    sql_on: ${flights.carrier} = ${carriers.code} ;;
-    relationship: many_to_one
-  }
-
-  join: aircraft {
-    type: left_outer
-    sql_on: ${flights.tail_num} = ${aircraft.tail_num} ;;
-    relationship: many_to_one
-  }
-
-  join: aircraft_models {
-    sql_on: ${aircraft.aircraft_model_code} = ${aircraft_models.aircraft_model_code} ;;
-    relationship: many_to_one
-  }
+  hidden: yes
 }
 
 explore: ontime {
-  #hidden: yes
+  hidden: yes
 }
 
 explore: regions {
-  #hidden: yes
+  hidden: yes
 }
