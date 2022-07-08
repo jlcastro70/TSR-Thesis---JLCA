@@ -3,6 +3,34 @@ view: flights {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
   sql_table_name: public.flights ;;
+
+  parameter: airlinecarrier {
+    required_fields: [carrier]
+    type: string
+    full_suggestions: yes
+    allowed_value: { value: "AA"}
+    allowed_value: { value: "AQ"}
+    allowed_value: { value: "AS"}
+    allowed_value: { value: "B6"}
+    allowed_value: { value: "CO"}
+    allowed_value: { value: "DH"}
+    allowed_value: { value: "DL"}
+    allowed_value: { value: "EV"}
+    allowed_value: { value: "FL"}
+    allowed_value: { value: "HA"}
+    allowed_value: { value: "HP"}
+    allowed_value: { value: "MQ"}
+    allowed_value: { value: "NW"}
+    allowed_value: { value: "OH"}
+    allowed_value: { value: "OO"}
+    allowed_value: { value: "RU"}
+    allowed_value: { value: "TW"}
+    allowed_value: { value: "TZ"}
+    allowed_value: { value: "UA"}
+    allowed_value: { value: "US"}
+    allowed_value: { value: "WN"}
+  }
+
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
 
@@ -82,6 +110,11 @@ view: flights {
   dimension: destination {
     type: string
     sql: ${TABLE}.destination ;;
+    link: {
+      label: "A new label"
+      url: "http://www.google.com/search?q={{ value }}"
+      icon_url: "http://google.com/favicon.ico"
+    }
   }
 
   dimension: distance {
