@@ -37,6 +37,10 @@ explore: aircraft_models {
   #hidden: yes
 }
 
+explore: airport_dt {
+  #hidden: yes
+}
+
 explore: airports {
   join: accidents {
     type: left_outer
