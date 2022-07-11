@@ -4,23 +4,6 @@ view: accidents {
   # to be used for all fields in this view.
   sql_table_name: public.accidents ;;
 
-  parameter: airline {
-    required_fields: [air_carrier]
-    type: string
-    full_suggestions: yes
-    allowed_value: { value: "American Airlines"}
-    allowed_value: { value: "United Airlines  "}
-    allowed_value: { value: "Delta Air Lines  "}
-    allowed_value: { value: "Southwest Airlines"}
-    allowed_value: { value: "Continental Airlines"}
-    allowed_value: { value: "Northwest Airlines"}
-    allowed_value: { value: "US Airways "}
-    allowed_value: { value: "Atlantic Southeast Airlines"}
-    allowed_value: { value: "US Airways"}
-    allowed_value: { value: "Alaska Airlines"}
-    allowed_value: { value: "Jetblue Airways"}
-  }
-
   drill_fields: [id]
   # This primary key is the unique key for this table in the underlying database.
   # You need to define a primary key in a view in order to join to other views.

@@ -38,7 +38,7 @@ explore: aircraft_models {
 }
 
 explore: airport_dt {
-  #hidden: yes
+  hidden: yes
 }
 
 explore: airports {
@@ -50,6 +50,11 @@ explore: airports {
   join: aircraft {
     type: left_outer
     sql_on: ${accidents.registration_number} = ${aircraft.tail_num} ;;
+    relationship: many_to_one
+  }
+  join: airport_dt {
+    type: left_outer
+    sql_on: ${airports.full_name} = ${airport_dt.airports_full_name} ;;
     relationship: many_to_one
   }
   join: flights {
